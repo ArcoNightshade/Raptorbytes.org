@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Raptorbytes</title>
+        <!-- Tailwind CSS CDN -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap");
+            body {
+                font-family: "Orbitron", sans-serif;
+                color: #e8e8e8;
+                background-color: #121212;
+                overflow-x: hidden;
+            }
+            .text-neon-purple {
+                color: #6a0dad;
+            }
+            .bg-neon-purple {
+                background-color: #6a0dad;
+            }
+            .border-neon-purple {
+                border-color: #6a0dad;
+            }
+            .glow {
+                text-shadow:
+                    0 0 5px #6a0dad,
+                    0 0 10px #6a0dad,
+                    0 0 15px #6a0dad;
+            }
+            .section {
+                display: none;
+            }
+            .active {
+                display: block;
+            }
+            .nav-link.active-link {
+                border-bottom: 2px solid #6a0dad;
+                color: #fff;
+                text-shadow: 0 0 5px #6a0dad;
+            }
+            .scroll-grid {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image:
+                    linear-gradient(to right, #252525 1px, transparent 1px),
+                    linear-gradient(to bottom, #252525 1px, transparent 1px);
+                background-size: 20px 20px;
+                z-index: -1;
+                animation: scroll-grid-anim 20s linear infinite;
+            }
+            @keyframes scroll-grid-anim {
+                from {
+                    background-position: 0 0;
+                }
+                to {
+                    background-position: -400px -400px;
+                }
+            }
+            .project-card,
+            .social-card {
+                transition:
+                    transform 0.3s ease,
+                    box-shadow 0.3s ease;
+            }
+            .project-card:hover,
+            .social-card:hover {
+                transform: translateY(-10px) scale(1.05);
+                box-shadow: 0 10px 20px rgba(106, 13, 173, 0.5);
+            }
+        </style>
+    </head>
+    <body class="bg-[#121212] font-['Orbitron']">
+        <!-- Grid background for futuristic aesthetic -->
+        <div class="scroll-grid"></div>
+
+        <!-- Navigation Bar -->
+        <header
+            class="fixed top-0 left-0 w-full z-50 bg-[#121212]/80 backdrop-blur-md"
+        >
+            <nav
+                class="max-w-6xl mx-auto flex justify-between items-center py-4 px-6"
+            >
+                <div class="flex items-center space-x-2">
+                    <!-- Simple SVG logo based on the aesthetic -->
+                    <svg
+                        width="40"
+                        height="40"
+                        viewBox="0 0 40 40"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M20 0L24.8944 15.451H40L27.5528 24.549L32.3607 40L20 30.901L7.63932 40L12.4472 24.549L0 15.451H15.1056L20 0Z"
+                            fill="#6a0dad"
+                        />
+                    </svg>
+                    <span class="text-3xl font-bold text-neon-purple glow"
+                        >Raptorbytes</span
+                    >
+                </div>
+                <div class="flex space-x-8 text-xl font-bold">
+                    <a
+                        href="#home"
+                        class="nav-link text-gray-400 hover:text-white transition-colors duration-300"
+                        >Home</a
+                    >
+                    <a
+                        href="#projects"
+                        class="nav-link text-gray-400 hover:text-white transition-colors duration-300"
+                        >Projects</a
+                    >
+                    <a
+                        href="#socials"
+                        class="nav-link text-gray-400 hover:text-white transition-colors duration-300"
+                        >Socials</a
+                    >
+                    <a
+                        href="#contact"
+                        class="nav-link text-gray-400 hover:text-white transition-colors duration-300"
+                        >Contact Us</a
+                    >
+                </div>
+            </nav>
+        </header>
+
+        <main class="pt-24 px-6 max-w-6xl mx-auto">
+            <!-- Homepage Section -->
+            <section
+                id="home"
+                class="section active min-h-screen flex flex-col justify-center items-center text-center"
+            >
+                <h1
+                    class="text-6xl md:text-8xl font-bold mb-4 text-neon-purple glow"
+                >
+                    Raptorbytes
+                </h1>
+                <p class="text-2xl md:text-3xl font-light max-w-3xl mb-10">
+                    Crafting digital experiences with precision and passion. We
+                    build the future, one byte at a time.
+                </p>
+                <div class="flex space-x-4">
+                    <a
+                        href="#projects"
+                        class="bg-neon-purple text-white px-8 py-4 rounded-full font-bold uppercase tracking-wider hover:bg-opacity-80 transition-all duration-300"
+                    >
+                        See Our Work
+                    </a>
+                    <a
+                        href="#contact"
+                        class="border border-neon-purple text-neon-purple px-8 py-4 rounded-full font-bold uppercase tracking-wider hover:bg-neon-purple hover:text-white transition-all duration-300"
+                    >
+                        Get in Touch
+                    </a>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="section py-24 min-h-screen">
+                <h2
+                    class="text-5xl font-bold mb-16 text-center text-neon-purple glow"
+                >
+                    Our Projects
+                </h2>
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+                >
+                    <!-- Project 1 -->
+                    <div
+                        class="project-card bg-gray-900 border border-neon-purple rounded-xl overflow-hidden shadow-lg p-6"
+                    >
+                        <img
+                            src="https://placehold.co/600x400/121212/6a0dad?text=Project+1"
+                            alt="Project 1"
+                            class="w-full h-48 object-cover rounded-md mb-4 border border-neon-purple"
+                        />
+                        <h3 class="text-2xl font-bold mb-2 text-neon-purple">
+                            Project One
+                        </h3>
+                        <p class="text-gray-400 text-sm mb-4">
+                            A brief description of your first project,
+                            highlighting its purpose and key features.
+                        </p>
+                        <a
+                            href="#"
+                            class="inline-block bg-neon-purple text-white px-4 py-2 rounded-full text-sm hover:bg-opacity-80 transition-colors"
+                            >Learn More</a
+                        >
+                    </div>
+                    <!-- Project 2 -->
+                    <div
+                        class="project-card bg-gray-900 border border-neon-purple rounded-xl overflow-hidden shadow-lg p-6"
+                    >
+                        <img
+                            src="https://placehold.co/600x400/121212/6a0dad?text=Project+2"
+                            alt="Project 2"
+                            class="w-full h-48 object-cover rounded-md mb-4 border border-neon-purple"
+                        />
+                        <h3 class="text-2xl font-bold mb-2 text-neon-purple">
+                            Project Two
+                        </h3>
+                        <p class="text-gray-400 text-sm mb-4">
+                            A brief description of your second project,
+                            highlighting its purpose and key features.
+                        </p>
+                        <a
+                            href="#"
+                            class="inline-block bg-neon-purple text-white px-4 py-2 rounded-full text-sm hover:bg-opacity-80 transition-colors"
+                            >Learn More</a
+                        >
+                    </div>
+                    <!-- Project 3 -->
+                    <div
+                        class="project-card bg-gray-900 border border-neon-purple rounded-xl overflow-hidden shadow-lg p-6"
+                    >
+                        <img
+                            src="https://placehold.co/600x400/121212/6a0dad?text=Project+3"
+                            alt="Project 3"
+                            class="w-full h-48 object-cover rounded-md mb-4 border border-neon-purple"
+                        />
+                        <h3 class="text-2xl font-bold mb-2 text-neon-purple">
+                            Project Three
+                        </h3>
+                        <p class="text-gray-400 text-sm mb-4">
+                            A brief description of your third project,
+                            highlighting its purpose and key features.
+                        </p>
+                        <a
+                            href="#"
+                            class="inline-block bg-neon-purple text-white px-4 py-2 rounded-full text-sm hover:bg-opacity-80 transition-colors"
+                            >Learn More</a
+                        >
+                    </div>
+                </div>
+            </section>
+
+            <!-- Socials Section -->
+            <section
+                id="socials"
+                class="section py-24 min-h-screen flex flex-col items-center justify-center"
+            >
+                <h2
+                    class="text-5xl font-bold mb-16 text-center text-neon-purple glow"
+                >
+                    Our Digital Presence
+                </h2>
+                <div class="flex justify-center items-center space-x-10">
+                    <!-- GitHub Card -->
+                    <a
+                        href="https://github.com/your-username"
+                        target="_blank"
+                        class="social-card bg-gray-900 border border-neon-purple rounded-xl p-8 flex flex-col items-center hover:scale-110 transition-transform duration-300"
+                    >
+                        <img
+                            src="https://placehold.co/60x60/121212/6a0dad?text=GH"
+                            alt="GitHub"
+                            class="w-16 h-16 mb-4"
+                        />
+                        <span class="text-xl font-bold text-neon-purple"
+                            >GitHub</span
+                        >
+                    </a>
+                    <!-- Social 1 Card -->
+                    <a
+                        href="#"
+                        target="_blank"
+                        class="social-card bg-gray-900 border border-neon-purple rounded-xl p-8 flex flex-col items-center hover:scale-110 transition-transform duration-300"
+                    >
+                        <img
+                            src="https://placehold.co/60x60/121212/6a0dad?text=X"
+                            alt="X"
+                            class="w-16 h-16 mb-4"
+                        />
+                        <span class="text-xl font-bold text-neon-purple"
+                            >X</span
+                        >
+                    </a>
+                    <!-- Social 2 Card -->
+                    <a
+                        href="#"
+                        target="_blank"
+                        class="social-card bg-gray-900 border border-neon-purple rounded-xl p-8 flex flex-col items-center hover:scale-110 transition-transform duration-300"
+                    >
+                        <img
+                            src="https://placehold.co/60x60/121212/6a0dad?text=LI"
+                            alt="LinkedIn"
+                            class="w-16 h-16 mb-4"
+                        />
+                        <span class="text-xl font-bold text-neon-purple"
+                            >LinkedIn</span
+                        >
+                    </a>
+                </div>
+            </section>
+
+            <!-- Contact Us Section -->
+            <section
+                id="contact"
+                class="section py-24 min-h-screen flex flex-col items-center justify-center"
+            >
+                <h2
+                    class="text-5xl font-bold mb-16 text-center text-neon-purple glow"
+                >
+                    Contact Us
+                </h2>
+                <div
+                    class="bg-gray-900 border border-neon-purple rounded-xl p-10 max-w-xl w-full"
+                >
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label
+                                for="name"
+                                class="block text-sm font-medium text-gray-300"
+                                >Name</label
+                            >
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                class="mt-1 block w-full px-4 py-2 bg-gray-800 text-white border border-neon-purple rounded-md focus:outline-none focus:ring-2 focus:ring-neon-purple"
+                                required
+                            />
+                        </div>
+                        <div>
+                            <label
+                                for="email"
+                                class="block text-sm font-medium text-gray-300"
+                                >Email</label
+                            >
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                class="mt-1 block w-full px-4 py-2 bg-gray-800 text-white border border-neon-purple rounded-md focus:outline-none focus:ring-2 focus:ring-neon-purple"
+                                required
+                            />
+                        </div>
+                        <div>
+                            <label
+                                for="message"
+                                class="block text-sm font-medium text-gray-300"
+                                >Message</label
+                            >
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="5"
+                                class="mt-1 block w-full px-4 py-2 bg-gray-800 text-white border border-neon-purple rounded-md focus:outline-none focus:ring-2 focus:ring-neon-purple"
+                                required
+                            ></textarea>
+                        </div>
+                        <button
+                            type="submit"
+                            class="w-full bg-neon-purple text-white px-4 py-2 rounded-md font-bold uppercase tracking-wider hover:bg-opacity-80 transition-colors"
+                        >
+                            Send Message
+                        </button>
+                    </form>
+                    <div
+                        id="form-message"
+                        class="mt-4 text-center hidden"
+                    ></div>
+                </div>
+            </section>
+        </main>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const navLinks = document.querySelectorAll(".nav-link");
+                const sections = document.querySelectorAll(".section");
+                const contactForm = document.getElementById("contact-form");
+                const formMessage = document.getElementById("form-message");
+
+                // Function to handle page navigation
+                function navigateTo(targetId) {
+                    // Hide all sections
+                    sections.forEach((section) => {
+                        section.classList.remove("active");
+                    });
+                    // Show the target section
+                    document.getElementById(targetId).classList.add("active");
+
+                    // Update active link styling
+                    navLinks.forEach((link) => {
+                        link.classList.remove("active-link");
+                        if (link.getAttribute("href") === "#" + targetId) {
+                            link.classList.add("active-link");
+                        }
+                    });
+                }
+
+                // Initial navigation setup
+                const initialHash = window.location.hash.substring(1) || "home";
+                navigateTo(initialHash);
+
+                // Handle navigation clicks
+                navLinks.forEach((link) => {
+                    link.addEventListener("click", (e) => {
+                        e.preventDefault();
+                        const targetId = e.target
+                            .getAttribute("href")
+                            .substring(1);
+                        navigateTo(targetId);
+                        history.pushState(null, null, "#" + targetId);
+                    });
+                });
+
+                // Handle popstate event for back/forward browser buttons
+                window.addEventListener("popstate", () => {
+                    const targetId =
+                        window.location.hash.substring(1) || "home";
+                    navigateTo(targetId);
+                });
+
+                // Handle contact form submission
+                contactForm.addEventListener("submit", (e) => {
+                    e.preventDefault();
+
+                    // Here you would typically send the form data to a server
+                    // For this example, we'll just show a success message
+                    formMessage.textContent =
+                        "Thank you for your message! We will get back to you soon.";
+                    formMessage.classList.remove("hidden");
+                    formMessage.classList.add("text-green-500");
+                    contactForm.reset();
+
+                    setTimeout(() => {
+                        formMessage.classList.add("hidden");
+                    }, 5000);
+                });
+            });
+        </script>
+    </body>
+</html>
