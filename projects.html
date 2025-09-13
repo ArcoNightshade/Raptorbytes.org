@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Raptorbytes - Home</title>
+    <title>Raptorbytes - Projects</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap");
@@ -65,19 +65,35 @@
   const menu = document.getElementById('mobile-menu');
   toggle.addEventListener('click', () => { menu.classList.toggle('hidden'); });
 </script>
-    <main class="pt-24 flex flex-col justify-center items-center text-center min-h-screen">
-      <h1 class="text-6xl md:text-8xl font-bold mb-4 text-neon-purple glow">Raptorbytes</h1>
-      <p class="text-2xl md:text-3xl font-light max-w-3xl mb-10">
-        Crafting digital experiences with precision and passion.<br>
-        We build the future, one byte at a time.
-      </p>
-      <div class="flex space-x-4">
-        <a href="projects.html" class="bg-neon-purple text-white px-8 py-4 rounded-full font-bold uppercase tracking-wider hover:bg-opacity-80">
-          See Our Work
-        </a>
-        <a href="contact.html" class="border border-neon-purple text-neon-purple px-8 py-4 rounded-full font-bold uppercase tracking-wider hover:bg-neon-purple hover:text-white">
-          Get in Touch
-        </a>
+    <main class="pt-24 px-6 max-w-6xl mx-auto">
+      <h2 class="text-5xl font-bold mb-16 text-center text-neon-purple glow">Our Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div class="project-card bg-gray-900 border border-neon-purple rounded-xl p-6">
+          <img src="https://placehold.co/600x400/121212/5500ff?text=Project+1" class="w-full h-48 object-cover rounded-md mb-4 border border-neon-purple" />
+          <h3 class="text-2xl font-bold mb-2 text-neon-purple">Project One</h3>
+          <p class="text-gray-400 text-sm mb-4">A brief description of your first project.</p>
+          <a href="#" class="bg-neon-purple text-white px-4 py-2 rounded-full text-sm hover:bg-opacity-80">Learn More</a>
+        </div>
+        <div class="project-card bg-gray-900 border border-neon-purple rounded-xl p-6">
+          <img src="https://placehold.co/600x400/121212/5500ff?text=Project+2" class="w-full h-48 object-cover rounded-md mb-4 border border-neon-purple" />
+          <h3 class="text-2xl font-bold mb-2 text-neon-purple">Project Two</h3>
+          <p class="text-gray-400 text-sm mb-4">A brief description of your second project.</p>
+          <a href="#" class="bg-neon-purple text-white px-4 py-2 rounded-full text-sm hover:bg-opacity-80">Learn More</a>
+        </div>
+        <div class="project-card bg-gray-900 border border-neon-purple rounded-xl p-6">
+          <img src="https://placehold.co/600x400/121212/5500ff?text=Project+3" class="w-full h-48 object-cover rounded-md mb-4 border border-neon-purple" />
+          <h3 class="text-2xl font-bold mb-2 text-neon-purple">Project Three</h3>
+          <p class="text-gray-400 text-sm mb-4">A brief description of your third project.</p>
+          <a href="#" class="bg-neon-purple text-white px-4 py-2 rounded-full text-sm hover:bg-opacity-80">Learn More</a>
+        </div>
+        <div class="project-card bg-gray-900 border border-neon-purple rounded-xl p-6">
+          <img src="https://placehold.co/600x400/121212/5500ff?text=LyonOS" class="w-full h-48 object-cover rounded-md mb-4 border border-neon-purple" />
+          <h3 class="text-2xl font-bold mb-2 text-neon-purple">LyonOS</h3>
+          <p class="text-gray-400 text-sm mb-4">
+            A NixOS-based flake that powers a streamlined, customizable Linux experience. Designed for hackers, homelabbers, and tinkerers who want total control.
+          </p>
+          <a href="https://github.com/ArcoNightshade/LyonOS-V2" target="_blank" class="bg-neon-purple text-white px-4 py-2 rounded-full text-sm hover:bg-opacity-80">View on GitHub</a>
+        </div>
       </div>
     </main>
   </body>
