@@ -31,29 +31,29 @@
         to { background-position: -400px -400px; }
       }
     </style>
+  <meta name="theme-color" content="#5500ff">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
   </head>
   <body>
     <!-- Grid background -->
     <div class="scroll-grid"></div>
 
     <header class="fixed top-0 left-0 w-full z-50 bg-[#121212]/80 backdrop-blur-md">
-  <nav class="max-w-6xl mx-auto flex justify-between items-center py-4 px-6">
+  <nav class="max-w-6xl mx-auto flex justify-between items-center py-3 px-4 md:py-4 md:px-6">
     <div class="flex items-center">
-      <a href="index.html">
-        <img src="logo.svg" alt="Raptorbytes Logo" class="h-10 md:h-12 lg:h-16 w-auto">
-      </a>
+      <a href="index.html" class="text-2xl md:text-3xl font-bold text-neon-purple glow">Raptorbytes</a>
     </div>
-    <div class="hidden md:flex space-x-8 text-xl font-bold">
+    <div class="hidden md:flex space-x-4 lg:space-x-8 text-base md:text-lg lg:text-xl font-bold">
       <a href="index.html" class="text-gray-400 hover:text-white">Home</a>
       <a href="projects.html" class="text-gray-400 hover:text-white">Projects</a>
       <a href="socials.html" class="text-gray-400 hover:text-white">Socials</a>
       <a href="contact.html" class="text-gray-400 hover:text-white">Contact Us</a>
     </div>
     <div class="md:hidden">
-      <button id="menu-toggle" class="text-gray-400 hover:text-white focus:outline-none">☰</button>
+      <button id="menu-toggle" class="text-gray-400 hover:text-white focus:outline-none text-2xl">☰</button>
     </div>
   </nav>
-  <div id="mobile-menu" class="hidden md:hidden flex flex-col space-y-2 px-6 pb-4 bg-[#121212]/95">
+  <div id="mobile-menu" class="hidden md:hidden flex flex-col space-y-2 px-6 pb-4 bg-[#121212]/95 text-lg">
     <a href="index.html" class="text-gray-400 hover:text-white">Home</a>
     <a href="projects.html" class="text-gray-400 hover:text-white">Projects</a>
     <a href="socials.html" class="text-gray-400 hover:text-white">Socials</a>
@@ -65,12 +65,12 @@
   const menu = document.getElementById('mobile-menu');
   toggle.addEventListener('click', () => { menu.classList.toggle('hidden'); });
 </script>
-    <main class="pt-24 min-h-screen flex flex-col items-center justify-center">
-      <h2 class="text-5xl font-bold mb-16 text-center text-neon-purple glow">Our Digital Presence</h2>
-      <div class="flex space-x-10">
-        <a href="https://github.com/Raptorbytes" target="_blank" class="social-card bg-gray-900 border border-neon-purple rounded-xl p-8 flex flex-col items-center">
-          <img src="https://placehold.co/60x60/121212/5500ff?text=GH" class="w-16 h-16 mb-4"/>
-          <span class="text-xl font-bold text-neon-purple">GitHub</span>
+    <main class="pt-24 min-h-screen flex flex-col items-center justify-center px-4">
+      <h2 class="text-4xl md:text-5xl font-bold mb-10 md:mb-16 text-center text-neon-purple glow">Our Digital Presence</h2>
+      <div class="flex justify-center">
+        <a href="https://github.com/Raptorbytes" target="_blank" class="social-card bg-gray-900 border border-neon-purple rounded-xl p-6 sm:p-8 flex flex-col items-center">
+          <img src="https://placehold.co/60x60/121212/5500ff?text=GH" class="w-12 h-12 sm:w-16 sm:h-16 mb-4"/>
+          <span class="text-lg sm:text-xl font-bold text-neon-purple">GitHub</span>
         </a>
       </div>
     </main>

@@ -31,29 +31,29 @@
         to { background-position: -400px -400px; }
       }
     </style>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
   </head>
   <body>
     <!-- Grid background -->
     <div class="scroll-grid"></div>
 
+    <meta name="theme-color" content="#5500ff">
     <header class="fixed top-0 left-0 w-full z-50 bg-[#121212]/80 backdrop-blur-md">
-  <nav class="max-w-6xl mx-auto flex justify-between items-center py-4 px-6">
+  <nav class="max-w-6xl mx-auto flex justify-between items-center py-3 px-4 md:py-4 md:px-6">
     <div class="flex items-center">
-      <a href="index.html">
-        <img src="logo.svg" alt="Raptorbytes Logo" class="h-10 md:h-12 lg:h-16 w-auto">
-      </a>
+      <a href="index.html" class="text-2xl md:text-3xl font-bold text-neon-purple glow">Raptorbytes</a>
     </div>
-    <div class="hidden md:flex space-x-8 text-xl font-bold">
+    <div class="hidden md:flex space-x-4 lg:space-x-8 text-base md:text-lg lg:text-xl font-bold">
       <a href="index.html" class="text-gray-400 hover:text-white">Home</a>
       <a href="projects.html" class="text-gray-400 hover:text-white">Projects</a>
       <a href="socials.html" class="text-gray-400 hover:text-white">Socials</a>
       <a href="contact.html" class="text-gray-400 hover:text-white">Contact Us</a>
     </div>
     <div class="md:hidden">
-      <button id="menu-toggle" class="text-gray-400 hover:text-white focus:outline-none">☰</button>
+      <button id="menu-toggle" class="text-gray-400 hover:text-white focus:outline-none text-2xl">☰</button>
     </div>
   </nav>
-  <div id="mobile-menu" class="hidden md:hidden flex flex-col space-y-2 px-6 pb-4 bg-[#121212]/95">
+  <div id="mobile-menu" class="hidden md:hidden flex flex-col space-y-2 px-6 pb-4 bg-[#121212]/95 text-lg">
     <a href="index.html" class="text-gray-400 hover:text-white">Home</a>
     <a href="projects.html" class="text-gray-400 hover:text-white">Projects</a>
     <a href="socials.html" class="text-gray-400 hover:text-white">Socials</a>
@@ -65,34 +65,16 @@
   const menu = document.getElementById('mobile-menu');
   toggle.addEventListener('click', () => { menu.classList.toggle('hidden'); });
 </script>
-    <main class="pt-24 px-6 max-w-6xl mx-auto">
-      <h2 class="text-5xl font-bold mb-16 text-center text-neon-purple glow">Our Projects</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-        <div class="project-card bg-gray-900 border border-neon-purple rounded-xl p-6">
-          <img src="https://placehold.co/600x400/121212/5500ff?text=Project+1" class="w-full h-48 object-cover rounded-md mb-4 border border-neon-purple" />
-          <h3 class="text-2xl font-bold mb-2 text-neon-purple">Project One</h3>
-          <p class="text-gray-400 text-sm mb-4">A brief description of your first project.</p>
-          <a href="#" class="bg-neon-purple text-white px-4 py-2 rounded-full text-sm hover:bg-opacity-80">Learn More</a>
-        </div>
-        <div class="project-card bg-gray-900 border border-neon-purple rounded-xl p-6">
-          <img src="https://placehold.co/600x400/121212/5500ff?text=Project+2" class="w-full h-48 object-cover rounded-md mb-4 border border-neon-purple" />
-          <h3 class="text-2xl font-bold mb-2 text-neon-purple">Project Two</h3>
-          <p class="text-gray-400 text-sm mb-4">A brief description of your second project.</p>
-          <a href="#" class="bg-neon-purple text-white px-4 py-2 rounded-full text-sm hover:bg-opacity-80">Learn More</a>
-        </div>
-        <div class="project-card bg-gray-900 border border-neon-purple rounded-xl p-6">
-          <img src="https://placehold.co/600x400/121212/5500ff?text=Project+3" class="w-full h-48 object-cover rounded-md mb-4 border border-neon-purple" />
-          <h3 class="text-2xl font-bold mb-2 text-neon-purple">Project Three</h3>
-          <p class="text-gray-400 text-sm mb-4">A brief description of your third project.</p>
-          <a href="#" class="bg-neon-purple text-white px-4 py-2 rounded-full text-sm hover:bg-opacity-80">Learn More</a>
-        </div>
-        <div class="project-card bg-gray-900 border border-neon-purple rounded-xl p-6">
-          <img src="https://placehold.co/600x400/121212/5500ff?text=LyonOS" class="w-full h-48 object-cover rounded-md mb-4 border border-neon-purple" />
-          <h3 class="text-2xl font-bold mb-2 text-neon-purple">LyonOS</h3>
+    <main class="pt-24 px-4 sm:px-6 max-w-6xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-bold mb-10 md:mb-16 text-center text-neon-purple glow">Our Projects</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
+        <div class="project-card bg-gray-900 border border-neon-purple rounded-xl p-4 sm:p-6">
+          <img src="https://placehold.co/600x400/121212/5500ff?text=LyonOS" class="w-full h-40 sm:h-48 object-cover rounded-md mb-4 border border-neon-purple" />
+          <h3 class="text-xl md:text-2xl font-bold mb-2 text-neon-purple">LyonOS</h3>
           <p class="text-gray-400 text-sm mb-4">
-            Lyon's personal Nix flake (but anyone can use it!), complete with cutting edge everything, and the Niri Compositor!
+            A NixOS-based flake that powers a streamlined, customizable Linux experience. Designed for hackers, homelabbers, and tinkerers who want total control.
           </p>
-          <a href="https://github.com/ArcoNightshade/LyonOS-V2" target="_blank" class="bg-neon-purple text-white px-4 py-2 rounded-full text-sm hover:bg-opacity-80">View on GitHub</a>
+          <a href="https://github.com/ArcoNightshade/LyonOS-V2" target="_blank" class="bg-neon-purple text-white px-3 py-2 rounded-full text-sm hover:bg-opacity-80">View on GitHub</a>
         </div>
       </div>
     </main>
